@@ -1,611 +1,274 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>
-Executive Summary Monitoring Kualitas Air Tambang
-</title>
+<title>Membuat Executive Summary Kualitas Air Tambang Selesai 30 Menit</title>
 
-
-<!-- Google Font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="description" content="Panduan praktis membuat executive summary laporan monitoring kualitas air tambang lengkap dengan template Word, checklist analisis, dan prompt AI.">
 
 
 <!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){
-n.callMethod?
-n.callMethod.apply(n,arguments):
-n.queue.push(arguments)
-};
-if(!f._fbq)f._fbq=n;
-
-n.push=n;
-n.loaded=!0;
-n.version='2.0';
-
-n.queue=[];
-
-t=b.createElement(e);
-t.async=!0;
-t.src=v;
-
-s=b.getElementsByTagName(e)[0];
-
-s.parentNode.insertBefore(t,s)
-}
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
 (window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-
-fbq('init','2228889521232981');
-
-fbq('track','PageView');
-
-fbq('track','ViewContent');
-
+fbq('init', '2228889521232981');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent');
 </script>
 
 
 <style>
 
-*{
+/* GLOBAL */
+
+* {
 box-sizing:border-box;
 }
 
-
-body{
-
+body {
 margin:0;
-
-font-family:'Inter',sans-serif;
-
+font-family:
+Arial, Helvetica, sans-serif;
 color:#111827;
-
 line-height:1.6;
-
-background:#ffffff;
-
 }
 
 
-.container{
-
+.container {
 max-width:1100px;
-
 margin:auto;
-
-padding:0 24px;
-
+padding:0 20px;
 }
 
 
 /* HERO */
 
-.hero{
+.hero {
 
-padding:70px 0;
+background:
+linear-gradient(135deg,#f8fafc,#eef2ff);
 
-background:#f8fafc;
+padding:70px 20px;
 
 }
 
 
-.hero-grid{
+.hero-grid {
 
 display:grid;
-
-grid-template-columns:1fr 420px;
-
-gap:50px;
-
+grid-template-columns:1fr 1fr;
+gap:40px;
 align-items:center;
 
 }
 
 
-.badge{
+.hero h1 {
 
-display:inline-block;
-
-background:#dbeafe;
-
-color:#1d4ed8;
-
-padding:8px 16px;
-
-border-radius:50px;
-
-font-size:14px;
-
-font-weight:600;
-
+font-size:42px;
+line-height:1.2;
 margin-bottom:20px;
 
 }
 
 
-h1{
+.hero span {
 
-font-size:44px;
-
-line-height:1.15;
-
-margin-bottom:20px;
+color:#2563eb;
 
 }
 
 
-.subtitle{
+.hero p {
 
 font-size:18px;
-
 color:#4b5563;
 
-margin-bottom:30px;
-
 }
 
 
-
-.btn{
+.cta-button {
 
 display:inline-block;
-
+margin-top:25px;
 background:#2563eb;
-
 color:white;
-
-padding:16px 32px;
-
-border-radius:12px;
-
+padding:16px 35px;
+border-radius:10px;
 text-decoration:none;
-
-font-weight:700;
-
-transition:.3s;
+font-weight:bold;
+font-size:18px;
 
 }
 
 
-.btn:hover{
+.cta-button:hover {
 
 background:#1d4ed8;
 
 }
 
 
-.cover{
+/* IMAGE */
 
+.book-image {
+
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,.1);
 text-align:center;
 
 }
 
 
-.cover img{
+.book-image img {
 
-width:100%;
-
-max-width:360px;
-
-border-radius:18px;
-
-box-shadow:0 20px 40px rgba(0,0,0,.15);
+max-width:100%;
+border-radius:10px;
 
 }
-
 
 
 /* SECTION */
 
+section {
 
-section{
-
-padding:70px 0;
+padding:70px 20px;
 
 }
 
 
-.section-title{
+.section-title {
 
 text-align:center;
-
 font-size:32px;
-
 margin-bottom:40px;
 
 }
 
 
+/* PROBLEM */
 
-.problem{
+.problem {
 
-background:#f9fafb;
+background:white;
 
 }
 
 
-.cards{
+.problem-grid {
 
 display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
 
+}
+
+
+.card {
+
+padding:25px;
+border-radius:15px;
+background:#f8fafc;
+
+}
+
+
+.card h3 {
+
+margin-top:0;
+
+}
+
+
+/* SOLUTION */
+
+.solution {
+
+background:#f8fafc;
+
+}
+
+
+.solution-box {
+
+max-width:850px;
+margin:auto;
+text-align:center;
+font-size:18px;
+
+}
+
+
+/* BONUS */
+
+.bonus-grid {
+
+display:grid;
 grid-template-columns:repeat(4,1fr);
-
 gap:20px;
 
 }
 
 
-
-.card{
-
-padding:25px;
-
-border-radius:16px;
+.bonus-item {
 
 background:white;
-
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.06);
 
 }
 
 
-.card h3{
+.bonus-item h3 {
 
 font-size:18px;
 
 }
 
 
-
-.card p{
-
-font-size:15px;
-
-color:#4b5563;
-
-}
-
-
-
 /* AUTHOR */
 
-
-.author{
-
-display:grid;
-
-grid-template-columns:250px 1fr;
-
-gap:40px;
-
-align-items:center;
-
-}
-
-
-.author img{
-
-width:220px;
-
-height:220px;
-
-object-fit:cover;
-
-border-radius:50%;
-
-}
-
-/* PRICE SECTION */
-
-.price-section {
-  padding: 60px 20px;
-  background: #f8fafc;
-  text-align: center;
-}
-
-.price-box {
-  max-width: 550px;
-  margin: auto;
-  background: white;
-  padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
-}
-
-
-.limited-offer {
-  display: inline-block;
-  background: #fee2e2;
-  color: #dc2626;
-  padding: 10px 18px;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-
-.price-box h2 {
-  margin: 25px 0 15px;
-  color: #111827;
-  font-size: 28px;
-}
-
-
-.price-description {
-  color: #4b5563;
-  line-height: 1.7;
-}
-
-
-.old-price {
-  margin-top: 30px;
-  font-size: 22px;
-  color: #9ca3af;
-  text-decoration: line-through;
-}
-
-
-.new-price {
-  font-size: 46px;
-  font-weight: 800;
-  color: #2563eb;
-}
-
-
-.price-note {
-  color: #16a34a;
-  font-weight: bold;
-}
-
-
-.bonus-box {
-  margin: 30px 0;
-  padding: 20px;
-  background: #f8fafc;
-  border-radius: 12px;
-  text-align: left;
-}
-
-
-.bonus-box ul {
-  line-height: 1.8;
-}
-
-
-.buy-button {
-  display: inline-block;
-  background: #2563eb;
-  color: white;
-  padding: 16px 35px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-
-.limited-text {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #6b7280;
-}
-<section class="price-section">
-
-  <div class="price-box">
-
-    <div class="limited-offer">
-      🔥 HARGA KHUSUS UNTUK 50 PEMBELI PERTAMA
-    </div>
-
-    <h2>
-      Dapatkan Ebook Membuat Executive Summary
-      Kualitas Air Tambang
-    </h2>
-
-    <p class="price-description">
-      Panduan praktis untuk membantu Anda membuat ringkasan laporan monitoring
-      yang lebih profesional, cepat, dan mudah dipahami.
-    </p>
-
-
-    <div class="old-price">
-      Rp 199.000
-    </div>
-
-    <div class="new-price">
-      Rp 126.000
-    </div>
-
-    <p class="price-note">
-      Hemat Rp 73.000 untuk pembeli awal
-    </p>
-
-
-    <div class="bonus-box">
-
-      <h3>
-        Yang Anda dapatkan:
-      </h3>
-
-      <ul>
-        <li>✓ Ebook panduan Executive Summary Kualitas Air Tambang</li>
-        <li>✓ Template Word siap edit</li>
-        <li>✓ Checklist analisis laporan</li>
-        <li>✓ Prompt AI untuk membantu penyusunan laporan</li>
-      </ul>
-
-    </div>
-
-  <a href="http://lynk.id/vokachannel/jqr56m6gl830/checkout" class="buy-button">
-       Ambil Ebooknya Sekarang
-    </a>
-
-
-    <p class="limited-text">
-      Harga Rp 126.000 hanya berlaku untuk 50 pembeli pertama.
-      Setelah kuota terpenuhi, harga kembali menjadi Rp 199.000.
-    </p>
-
-  </div>
-
-<!-- FAQ SECTION -->
-<section class="faq-section">
-
-  <div class="faq-container">
-
-    <h2>
-      Pertanyaan yang Sering Ditanyakan
-    </h2>
-
-
-    <div class="faq-item">
-      <h3>
-        Apakah ebook ini cocok untuk saya?
-      </h3>
-      <p>
-        Ebook ini cocok untuk engineer, environmental staff,
-        supervisor, consultant, atau siapa pun yang terlibat
-        dalam penyusunan laporan monitoring kualitas air tambang.
-      </p>
-    </div>
-
-
-    <div class="faq-item">
-      <h3>
-        Apakah saya membutuhkan pengalaman khusus?
-      </h3>
-      <p>
-        Tidak. Ebook ini dibuat dengan pendekatan praktis sehingga
-        dapat digunakan baik oleh pemula maupun profesional yang
-        ingin meningkatkan kualitas laporan.
-      </p>
-    </div>
-
-
-    <div class="faq-item">
-      <h3>
-        Apakah saya mendapatkan template yang bisa diedit?
-      </h3>
-      <p>
-        Ya. Anda mendapatkan template Word yang dapat disesuaikan
-        dengan kebutuhan laporan Anda.
-      </p>
-    </div>
-
-
-    <div class="faq-item">
-      <h3>
-        Bagaimana cara saya menerima ebook setelah pembayaran?
-      </h3>
-      <p>
-        Setelah pembayaran berhasil, Anda akan mendapatkan akses
-        untuk mengunduh ebook dan seluruh bonus yang tersedia.
-      </p>
-    </div>
-
-
-    <div class="faq-item">
-      <h3>
-        Apakah ebook ini membahas analisis hasil laboratorium?
-      </h3>
-      <p>
-        Ebook ini berfokus pada cara menyusun executive summary
-        yang profesional dari hasil monitoring kualitas air tambang,
-        termasuk bagaimana menyajikan informasi agar mudah dipahami.
-      </p>
-    </div>
-
-  </div>
-  
-</section>
-
-/* CTA */
-
-.cta{
+.author {
 
 background:#111827;
-
 color:white;
 
+}
+
+
+.author-box {
+
+max-width:800px;
+margin:auto;
 text-align:center;
 
 }
 
-
-.cta h2{
-
-font-size:36px;
-
-}
-
-
-
-footer{
-
-padding:25px;
-
-text-align:center;
-
-font-size:14px;
-
-color:#6b7280;
-
-}
-
-
-
-
-@media(max-width:800px){
-
-.hero-grid{
-
-grid-template-columns:1fr;
-
-}
-
-
-h1{
-
-font-size:32px;
-
-}
-
-
-.cards{
-
-grid-template-columns:1fr;
-
-}
-
-
-.author{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-}
-
-
-}
 
 </style>
 
 </head>
 
 
-
 <body>
 
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -614,51 +277,33 @@ text-align:center;
 
 <div>
 
-<div class="badge">
-EBOOK PRAKTIS UNTUK ENGINEER LINGKUNGAN
-</div>
-
-
 <h1>
-Selesaikan Executive Summary Monitoring Kualitas Air Tambang dalam ±30 Menit dengan Bantuan AI
+Membuat Executive Summary
+<br>
+<span>Kualitas Air Tambang</span>
+<br>
+Selesai Dalam 30 Menit
 </h1>
 
 
-<p class="subtitle">
-
-Panduan praktis menyusun ringkasan laporan kualitas air tambang yang profesional, mudah dipahami, dan siap digunakan untuk kebutuhan internal maupun eksternal.
-
+<p>
+Panduan praktis menyusun ringkasan laporan monitoring kualitas air tambang yang profesional, mudah dipahami, dan siap digunakan.
 </p>
 
 
-
-<a href="http://lynk.id/vokachannel/jqr56m6gl830/checkout"
-
-onclick="
-fbq('track','InitiateCheckout',{
-content_name:'Executive Summary Monitoring Kualitas Air Tambang',
-content_category:'Digital Product',
-value:49000,
-currency:'IDR'
-});
-"
-
-class="btn">
-
+<a href="http://lynk.id/vokachannel/jqr56m6gl830/checkout"cta-button">
 Dapatkan Ebook Sekarang
-
 </a>
 
 
 </div>
 
 
+<div class="book-image">
 
+<img src="https://via.placeholder.com/500x650?text=Cover+Ebook"
+alt="Cover Ebook Executive Summary">
 
-<div class="cover">
-
-<img src="ebook-cover.png"
-alt="Ebook Executive Summary Monitoring Kualitas Air Tambang">
 
 </div>
 
@@ -669,7 +314,7 @@ alt="Ebook Executive Summary Monitoring Kualitas Air Tambang">
 
 
 
-
+<!-- PROBLEM -->
 
 <section class="problem">
 
@@ -677,54 +322,34 @@ alt="Ebook Executive Summary Monitoring Kualitas Air Tambang">
 
 
 <h2 class="section-title">
-Masih Menghabiskan Berjam-jam Membuat Executive Summary?
+Masih Menghabiskan Banyak Waktu Membuat Executive Summary?
 </h2>
 
 
-<div class="cards">
+<div class="problem-grid">
 
 
 <div class="card">
-
-<h3>📊 Data Terlalu Banyak</h3>
-
+<h3>⏳ Lama Menyusun</h3>
 <p>
-Hasil monitoring lengkap sering sulit diubah menjadi informasi yang mudah dipahami manajemen.
+Menghabiskan waktu berjam-jam hanya untuk merangkum hasil monitoring.
 </p>
-
 </div>
 
 
 <div class="card">
-
-<h3>⏳ Waktu Terbuang</h3>
-
+<h3>📄 Format Tidak Konsisten</h3>
 <p>
-Penyusunan laporan bulanan membutuhkan waktu yang seharusnya bisa digunakan untuk analisis.
+Sulit membuat laporan yang terlihat profesional dan mudah dipahami manajemen.
 </p>
-
 </div>
 
 
 <div class="card">
-
-<h3>📝 Analisis Kurang Kuat</h3>
-
+<h3>📊 Analisis Kurang Terarah</h3>
 <p>
-Tabel angka saja belum cukup tanpa interpretasi dan insight yang jelas.
+Data laboratorium banyak, tetapi sulit menentukan poin penting yang harus ditampilkan.
 </p>
-
-</div>
-
-
-<div class="card">
-
-<h3>🤖 Belum Memanfaatkan AI</h3>
-
-<p>
-AI dapat membantu mempercepat proses analisis dan penyusunan laporan.
-</p>
-
 </div>
 
 
@@ -737,6 +362,36 @@ AI dapat membantu mempercepat proses analisis dan penyusunan laporan.
 
 
 
+<!-- SOLUTION -->
+
+
+<section class="solution">
+
+<div class="container">
+
+
+<h2 class="section-title">
+Solusi Praktis Untuk Membuat Executive Summary Profesional
+</h2>
+
+
+<div class="solution-box">
+
+<p>
+Ebook ini membantu Anda memahami cara memilih informasi penting, menyusun struktur executive summary, dan menghasilkan laporan yang lebih efektif tanpa mulai dari nol.
+</p>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- BONUS -->
 
 
 <section>
@@ -745,54 +400,42 @@ AI dapat membantu mempercepat proses analisis dan penyusunan laporan.
 
 
 <h2 class="section-title">
-Apa yang Anda Dapatkan?
+Apa Yang Anda Dapatkan?
 </h2>
 
 
-<div class="cards">
+<div class="bonus-grid">
 
 
-<div class="card">
-
-<h3>📘 Ebook Panduan Praktis</h3>
-
+<div class="bonus-item">
+<h3>📘 Ebook Panduan</h3>
 <p>
-Langkah sistematis membuat executive summary monitoring kualitas air tambang.
+Langkah praktis membuat executive summary kualitas air tambang.
 </p>
-
 </div>
 
 
-<div class="card">
-
-<h3>📄 Template Word</h3>
-
+<div class="bonus-item">
+<h3>📝 Template Word</h3>
 <p>
-Template siap edit untuk kebutuhan laporan perusahaan.
+Template siap edit untuk mempercepat pekerjaan Anda.
 </p>
-
 </div>
 
 
-<div class="card">
-
-<h3>✅ Checklist Review</h3>
-
+<div class="bonus-item">
+<h3>✅ Checklist Analisis</h3>
 <p>
-Memastikan laporan sudah lengkap sebelum dikirim.
+Memastikan poin penting laporan tidak terlewat.
 </p>
-
 </div>
 
 
-<div class="card">
-
+<div class="bonus-item">
 <h3>🤖 Prompt AI</h3>
-
 <p>
-Prompt siap digunakan untuk membantu analisis data.
+Gunakan AI untuk membantu proses penyusunan laporan.
 </p>
-
 </div>
 
 
@@ -802,44 +445,61 @@ Prompt siap digunakan untuk membantu analisis data.
 </div>
 
 </section>
+<!-- AUTHOR SECTION -->
+
+<section class="author">
+
+<div class="container">
+
+<div class="author-grid">
+
+
+<div class="author-photo">
+
+<img src="FOTO_AUTHOR_ANDA"
+alt="Guritno Soeleman">
+
+</div>
 
 
 
-
-
-
-<section>
-
-<div class="container author">
-
-
-<img src="author.png"
-alt="Penulis Ebook">
-
-
-<div>
+<div class="author-content">
 
 <h2>
 Tentang Penulis
 </h2>
 
 
+<h3>
+Guritno Soeleman
+</h3>
+
+
 <p>
-
-Guritno Soeleman adalah profesional Environmental Engineering dengan pengalaman lebih dari 20 tahun di industri dan perusahaan multinasional.
-
+Environmental Professional dengan pengalaman lebih dari 20 tahun
+dalam bidang pengelolaan lingkungan, compliance, dan penyusunan
+dokumen teknis di industri pertambangan.
 </p>
 
 
 <p>
+Berpengalaman dalam penyusunan laporan lingkungan, monitoring
+kualitas air, audit ISO 14001, serta komunikasi teknis antara
+operasional lapangan dan kebutuhan manajemen.
+</p>
 
-Melalui ebook ini, pengalaman praktis dalam penyusunan laporan monitoring kualitas lingkungan dirangkum menjadi panduan yang lebih sederhana dan mudah diterapkan.
 
+<p>
+Melalui ebook ini, saya ingin membantu profesional lingkungan
+menyusun executive summary yang lebih cepat, terstruktur,
+dan mudah dipahami oleh stakeholder.
 </p>
 
 
 </div>
 
+
+</div>
 
 </div>
 
@@ -849,35 +509,115 @@ Melalui ebook ini, pengalaman praktis dalam penyusunan laporan monitoring kualit
 
 
 
+<!-- PRICE SECTION -->
 
-<section class="cta">
+
+<section id="price" class="price-section">
 
 
 <div class="container">
 
 
+<div class="price-box">
+
+
+<div class="limited-offer">
+
+🔥 HARGA KHUSUS UNTUK 50 PEMBELI PERTAMA
+
+</div>
+
+
 <h2>
-Mulai Buat Executive Summary Lebih Cepat dan Profesional
+Membuat Executive Summary
+Kualitas Air Tambang
 </h2>
 
 
 <p>
-Dapatkan ebook, template, checklist, dan prompt AI dalam satu paket.
+Panduan praktis menyusun ringkasan laporan monitoring
+yang profesional, lengkap dengan template dan tools pendukung.
 </p>
 
 
 
-<a href="http://lynk.id/vokachannel/jqr56m6gl830/checkout"
+<div class="old-price">
 
-onclick="
-fbq('track','InitiateCheckout');
-"
+Rp 199.000
 
-class="btn">
+</div>
 
-Ambil Ebook Sekarang
+
+
+<div class="new-price">
+
+Rp 126.000
+
+</div>
+
+
+
+<p class="saving">
+
+Hemat Rp 73.000 untuk pembeli awal
+
+</p>
+
+
+
+<div class="price-bonus">
+
+
+<h3>
+Yang Anda Dapatkan:
+</h3>
+
+
+<ul>
+
+<li>
+✓ Ebook Panduan Executive Summary Kualitas Air Tambang
+</li>
+
+<li>
+✓ Template Word siap digunakan
+</li>
+
+<li>
+✓ Checklist analisis laporan
+</li>
+
+<li>
+✓ Prompt AI untuk membantu penyusunan laporan
+</li>
+
+</ul>
+
+
+</div>
+
+
+
+<a 
+href="http://lynk.id/vokachannel/jqr56m6gl830/checkout"
+class="cta-button checkout-button">
+
+Dapatkan Ebook Sekarang
 
 </a>
+
+
+
+<p class="limited-text">
+
+Harga Rp 126.000 hanya berlaku untuk 50 pembeli pertama.
+Setelah kuota terpenuhi, harga kembali menjadi Rp 199.000.
+
+</p>
+
+
+
+</div>
 
 
 </div>
@@ -888,18 +628,396 @@ Ambil Ebook Sekarang
 
 
 
+
+
+<!-- FAQ SECTION -->
+
+
+<section class="faq-section">
+
+
+<div class="container">
+
+
+<h2 class="section-title">
+
+Pertanyaan Yang Sering Ditanyakan
+
+</h2>
+
+
+
+<div class="faq-item">
+
+<h3>
+Apakah ebook ini cocok untuk saya?
+</h3>
+
+<p>
+Ebook ini cocok untuk engineer, environmental staff,
+supervisor, consultant, dan profesional yang terlibat
+dalam penyusunan laporan monitoring kualitas air tambang.
+</p>
+
+</div>
+
+
+
+
+<div class="faq-item">
+
+<h3>
+Apakah saya perlu pengalaman khusus?
+</h3>
+
+<p>
+Tidak. Materi dibuat dengan pendekatan praktis sehingga dapat
+digunakan oleh pemula maupun profesional yang ingin meningkatkan
+kualitas laporan.
+</p>
+
+</div>
+
+
+
+
+<div class="faq-item">
+
+<h3>
+Apakah saya mendapatkan template yang bisa diedit?
+</h3>
+
+<p>
+Ya. Anda mendapatkan template Word yang dapat disesuaikan
+dengan kebutuhan laporan perusahaan Anda.
+</p>
+
+</div>
+
+
+
+
+<div class="faq-item">
+
+<h3>
+Bagaimana cara menerima ebook setelah pembayaran?
+</h3>
+
+<p>
+Setelah pembayaran berhasil, Anda akan mendapatkan akses untuk
+mengunduh ebook dan seluruh bonus yang tersedia.
+</p>
+
+</div>
+
+
+
+
+<div class="faq-item">
+
+<h3>
+Apakah ebook membahas analisis hasil laboratorium?
+</h3>
+
+<p>
+Ebook ini berfokus pada cara menyusun executive summary dari
+hasil monitoring kualitas air tambang agar lebih mudah dipahami
+oleh manajemen dan stakeholder.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- FOOTER -->
+
+
 <footer>
 
-© Vekta Solusi ID
+<p>
+© 2026 Vekta Solusi. All Rights Reserved.
+</p>
+
 
 </footer>
 
 
 
-</body>
-
-</html>
 
 
-</body>
-</html>
+
+<style>
+
+
+/* AUTHOR */
+
+
+.author {
+
+background:#111827;
+color:white;
+
+}
+
+
+.author-grid {
+
+display:grid;
+grid-template-columns:250px 1fr;
+gap:40px;
+align-items:center;
+
+}
+
+
+.author-photo img {
+
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+border:5px solid white;
+
+}
+
+
+.author-content h2 {
+
+font-size:32px;
+margin-bottom:15px;
+
+}
+
+
+.author-content h3 {
+
+font-size:24px;
+margin-bottom:15px;
+
+}
+
+
+.author-content p {
+
+color:#e5e7eb;
+line-height:1.8;
+
+}
+
+
+
+
+
+/* PRICE */
+
+
+.price-section {
+
+background:#f8fafc;
+
+}
+
+
+
+.price-box {
+
+max-width:600px;
+margin:auto;
+background:white;
+padding:40px 30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+.limited-offer {
+
+display:inline-block;
+background:#fee2e2;
+color:#dc2626;
+padding:10px 18px;
+border-radius:50px;
+font-weight:bold;
+font-size:14px;
+
+}
+
+
+
+.old-price {
+
+margin-top:30px;
+font-size:22px;
+color:#9ca3af;
+text-decoration:line-through;
+
+}
+
+
+
+.new-price {
+
+font-size:48px;
+font-weight:800;
+color:#2563eb;
+
+}
+
+
+
+.saving {
+
+color:#16a34a;
+font-weight:bold;
+
+}
+
+
+
+.price-bonus {
+
+background:#f8fafc;
+padding:20px;
+border-radius:12px;
+text-align:left;
+margin:30px 0;
+
+}
+
+
+
+.price-bonus li {
+
+margin-bottom:10px;
+
+}
+
+
+
+.limited-text {
+
+font-size:14px;
+color:#6b7280;
+margin-top:20px;
+
+}
+
+
+
+
+
+/* FAQ */
+
+
+.faq-section {
+
+background:white;
+
+}
+
+
+
+.faq-item {
+
+border-bottom:1px solid #e5e7eb;
+padding:20px 0;
+
+}
+
+
+
+.faq-item h3 {
+
+font-size:18px;
+
+}
+
+
+
+.faq-item p {
+
+color:#4b5563;
+line-height:1.7;
+
+}
+
+
+
+
+
+/* FOOTER */
+
+
+footer {
+
+background:#111827;
+color:white;
+text-align:center;
+padding:25px;
+
+}
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:800px){
+
+
+.author-grid {
+
+grid-template-columns:1fr;
+text-align:center;
+
+}
+
+
+.author-photo img {
+
+margin:auto;
+
+}
+
+
+}
+
+</style>
+
+
+
+
+
+
+<!-- INITIATE CHECKOUT TRACKING -->
+
+
+<script>
+
+document.querySelectorAll('.checkout-button')
+.forEach(function(button){
+
+button.addEventListener('click', function(){
+
+fbq('track','InitiateCheckout');
+
+});
+
+});
+
+
+</script>
